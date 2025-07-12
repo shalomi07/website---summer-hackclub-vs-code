@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<htmL>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangtag | Contact Us</title>
+    <link rel="stylesheet" href="contactus.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us!</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactus.html">Order</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="orderform">
+            <label for="name">Full Name </label>
+            <input type="text" placeholder="Enter your full name" required>
+            <label for="wa-number">WhatsApp Number</label>
+            <input type="number" placeholder="Enter your WhatsApp number with country code" required>
+            <label for="question">Ask Question</label>
+            <input type="longtext" placeholder="Type your question here" required>
+            <button id="sendToWhatsApp">Send to WhatsApp</button>
+        </div>
+    <script>
+        function sendToWhatsApp(event){
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const waNumber =  document.getElementById('wa-number').value;
+            const question = document.getElementById('question').value;
+            const mywaNumber = "+6285141353419";
+            if (name && waNumber && question){
+                const message = encodeURIcomponent("Hello, I'm" + name + "and my WhatsApp number is" + waNumber + ". I want to ask you something about the hangtags." + question);
+                const url="https://wa.me/" + mywaNumber + "?text=" + message;
+                window.open(url, "_blank");
+            }
+            else{
+                alert("Please fill in all fields");
+            }
+        }
+    </script>    
+    </main>
