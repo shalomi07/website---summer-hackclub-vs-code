@@ -9,29 +9,37 @@
 <body>
     <header>
         <h1>Contact Us!</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contactus.html">Order</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="orderform">
-            <label for="name">Full Name </label>
-            <input type="text" placeholder="Enter your full name" required>
-            <label for="wa-number">WhatsApp Number</label>
-            <input type="number" placeholder="Enter your WhatsApp number with country code" required>
-            <label for="question">Ask Question</label>
-            <input type="longtext" placeholder="Type your question here" required>
-            <button id="sendToWhatsApp">Send to WhatsApp</button>
+            <div class="name">
+                <label for="name">Full Name </label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="wa-number">
+                <label for="wa-number">WhatsApp Number</label>
+                <input type="number" id="wa-number" placeholder="Enter your WhatsApp number with country code" required>
+            </div>
+            <div class="question">
+                <label for="question">Ask Question</label>
+                <textarea id="question" placeholder="Type your question here" required></textarea>
+            </div>
+            <button class="sendToWhatsApp" id="sendToWhatsApp"><b>Send to WhatsApp</b></button>
         </div>
     <script>
-        function sendToWhatsApp(event){
+        document.getElementById('sendToWhatsApp').onclick = function(event){
             event.preventDefault();
             const name = document.getElementById('name').value;
             const waNumber =  document.getElementById('wa-number').value;
             const question = document.getElementById('question').value;
-            const mywaNumber = "+6285141353419";
+            const mywaNumber = "6285141353419";
             if (name && waNumber && question){
                 const message = encodeURIcomponent("Hello, I'm" + name + "and my WhatsApp number is" + waNumber + ". I want to ask you something about the hangtags." + question);
                 const url="https://wa.me/" + mywaNumber + "?text=" + message;
