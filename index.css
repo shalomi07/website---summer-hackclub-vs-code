@@ -65,8 +65,6 @@ main ul{
     background-color: rgb(131, 197, 255);
     padding: 10px 20px;
     border: none;
-}
-.orderbutton a{
     text-decoration: none;
     color: rgb(1, 45, 112);
     font-weight: bold;
