@@ -18,7 +18,6 @@
         </nav>
     </header>
     <main>
-        <p>(still under maintenance)</p>
         <div class="orderform">
             <div class="name">
                 <label for="name">Full Name </label>
@@ -42,7 +41,7 @@
             const question = document.getElementById('question').value;
             const mywaNumber = "6285141353419";
             if (name && waNumber && question){
-                const message = encodeURIcomponent("Hello, I'm" + name + "and my WhatsApp number is" + waNumber + ". I want to ask you something about the hangtags." + question);
+                const message = encodeURIComponent("Hello, I'm " + name + " and my WhatsApp number is " + waNumber + ". I want to ask you something about the hangtags: " + question);
                 const url="https://wa.me/" + mywaNumber + "?text=" + message;
                 window.open(url, "_blank");
             }
