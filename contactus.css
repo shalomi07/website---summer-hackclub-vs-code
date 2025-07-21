@@ -14,7 +14,7 @@ body{
 nav {
     background-color: #ffdfdf;
     color: white;
-    padding: 10px;
+    padding: 5px 10px;
     text-align: left;
 }
 nav ul{
@@ -33,6 +33,11 @@ nav ul li a{
 }
 nav ul li:hover{
     background-color: rgb(255, 181, 181);
+}
+nav img{
+    width: 50px;
+    vertical-align: middle;
+    border-radius: 50%;
 }
 
 main{
