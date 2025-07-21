@@ -51,3 +51,25 @@ h2{
     box-shadow: rgb(18, 44, 16) 0px 0px 10px;
     margin: 20px 0;
 }
+.contentabout{
+    background-color:#ffffff79;
+    padding: 20px;
+    box-shadow:rgb(18, 44, 16) 0 0 10px;
+    margin: 20px 0;
+}
+.hangtagimg{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+}
+.hangtagimg img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+.hangtagimg figcaption{
+    font-size: 14px;
+    text-align: center;
+}

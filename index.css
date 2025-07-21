@@ -55,6 +55,11 @@ main ul{
     box-shadow: rgb(18, 44, 16) 0px 0px 10px;
     margin: 20px 0;
 }
+.introduction a{
+    text-decoration: none;
+    color: rgb(53, 1, 112);
+    font-weight: bold;
+}
 .productdetails{
     background-color: #ffffff88;
     padding: 20px;
@@ -73,3 +78,4 @@ main ul{
     background-color: rgb(189, 220, 247);
     cursor: pointer;
 }
+
